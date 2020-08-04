@@ -1,9 +1,33 @@
-ascii-video
+# ASCII Video
 
-A Python program which takes live video from your webcam and displays an ASCII-fied version.
+**Takes live video from your webcam and displays an ASCII art version.**
 
-To install the dependencies first install pipenv, then run 'pipenv install' from
-inside the directory with the program.
-The program can then be used with 'pipenv run python ascii-video.py' (may need to use python3 depending on system).
+## Installation and Usage
 
-Note: this is still a work in progress. In particular, there is no testing.
+First make sure [Python 3.8](https://www.python.org/) and [Pipenv](https://pipenv.pypa.io/en/latest/) are installed.
+
+Clone the repository and enter the root directory:
+```
+git clone https://github.com/whabbot/ascii-video.git
+cd ascii-video
+```
+Install dependencies using Pipenv:
+```
+pipenv install
+``` 
+Run ASCII Video from inside root directory:
+```
+pipenv run python ascii-video.py
+```
+
+### To install dev dependencies and run tests
+Install dev dependencies using Pipenv:
+```
+pipenv install --dev
+```
+This installs [pytest](https://docs.pytest.org) which is used for testing. Tests are located in the tests directory.
+
+Run tests using pytest:
+```
+pytest
+```
