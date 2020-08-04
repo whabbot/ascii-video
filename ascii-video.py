@@ -38,8 +38,8 @@ def main():
             prev_time = time.time()
             # Downscale captured frame to increase performance.
             downscaled = cv2.resize(frame, (120, 60), interpolation=cv2.INTER_LINEAR)
-            size, data = to_ascii.img_to_ascii(downscaled)
-            asciid = np.array(to_ascii.text_image(data))
+            ascii, shape = to_ascii.img_to_ascii(downscaled)
+            asciid = np.array(to_ascii.text_image(ascii, shape))
             cv2.imshow(window_name, asciid)
 
     cv2.destroyWindow(window_name)
